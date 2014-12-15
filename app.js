@@ -9,7 +9,7 @@ var http = require('http');
 var path = require('path');
 var app = express();
 
-app.set('port',process.env.PORT || 3000);
+app.set('port',process.env.PORT || 4500);
 app.set('views', __dirname + '/views');
 app.set('view engine','jade');
 app.use(express.favicon());
@@ -48,7 +48,7 @@ app.get('/update_article/:id', article.update_article);
 //app.get('/profile',user.profile);
 
 app.post('/apis/login',user.login);
-app.post('/apis/user/:id', user.update); 
+app.post('/apis/user/update/:id', user.update); 
 app.post('/apis/user/add', user.add); 
 app.post('/apis/article/add', article.add);
 app.post('/apis/article/:id', article.update);
