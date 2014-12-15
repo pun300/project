@@ -1,0 +1,14 @@
+{
+	"name" : "",
+	"dependencies" :{
+		"express" : "3.4.8",
+		"mongojs" : "",
+		"passport" : "",
+		"async" : "",
+		"jade" : "",
+		"mongoose" : "",
+		"socket.io": "",
+		"moment" : ""
+
+	}
+}

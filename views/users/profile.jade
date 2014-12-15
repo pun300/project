@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        title = 'profile'
+    body
+        div(style='float:left;margin:10px;')
+            a(href='/') Home
+        div(style='float:right')
+            if(username && authenticated)
+                a(href='/signout', style='margin:10px;') Sign Out
+                a(href='/add_article', style='margin:10px;') Add Article
+                a(href='/profile', style='margin:10px;') Profile
+                span #{username}
+            else
+                a(href='/register', style='margin:10px;') Register
+                a(href='/signin', style='margin:10px;') Log In
+
+
+        div(style='padding:50px;')
+            
+            form#update_user(method='post',action='/apis/user/'+user._id)
+                div 
+                    div
+                        span email
+                        span &emsp;
+                        input( name='email', type='text', style='width:200px', value=user.email)
+                        br
+                        br
+                        span password
+                        span &emsp;
+                        input( name='password',type='text', style='width:200px', value=user.password)
+                        br
+                        br
+                        input(type='submit',value='save')
+                    
